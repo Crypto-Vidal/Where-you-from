@@ -1,23 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CartModal from '@/components/cart/CartModal';
 import { CartProvider } from '@/context/CartContext';
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-body',
-  display: 'swap',
-});
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['700', '800', '900'],
-  variable: '--font-display',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: 'Where You From - Minnesota Pride Clothing | Locally Inspired Apparel',
@@ -77,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en">
       <body className="min-h-screen flex flex-col">
         <CartProvider>
           <Header />
