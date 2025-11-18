@@ -56,6 +56,10 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
     }
   };
 
+  const handleSizeChange = (size: string) => {
+    setSelectedSize(size as typeof selectedSize);
+  };
+
   return (
     <div className="grid lg:grid-cols-2 gap-12">
       {/* Image Gallery */}
@@ -187,7 +191,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
           variants={product.variants}
           selectedSize={selectedSize}
           selectedColor={selectedColor}
-          onSizeChange={setSelectedSize}
+          onSizeChange={handleSizeChange}
         />
 
         {/* Quantity */}
