@@ -3,12 +3,18 @@ import { Metadata } from 'next';
 import ProductDetails from '@/components/product/ProductDetails';
 import Reviews from '@/components/product/Reviews';
 import RelatedProducts from '@/components/product/RelatedProducts';
-import { getProductBySlug, getRelatedProducts } from '@/data/products';
+import { getProductBySlug, getRelatedProducts, products } from '@/data/products';
 
 interface ProductPageProps {
   params: {
     slug: string;
   };
+}
+
+export async function generateStaticParams() {
+  return products.map((product) => ({
+    slug: product.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
