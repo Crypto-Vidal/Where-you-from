@@ -1,11 +1,7 @@
-import { Metadata } from 'next';
+'use client';
+
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
-export const metadata: Metadata = {
-  title: 'Our Story - Born in Minnesota | Where You From',
-  description: 'Learn about Where You From - a Minnesota-born clothing brand celebrating local pride, community, and the North Star State\'s unique spirit.',
-};
 
 export default function AboutPage() {
   return (
