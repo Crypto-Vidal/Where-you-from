@@ -1,0 +1,16 @@
+{
+  "name": "Where You From - Minnesota Pride Clothing",
+  "short_name": "Where You From",
+  "description": "Minnesota-inspired clothing brand",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#22c55e",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
